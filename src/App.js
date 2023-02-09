@@ -7,7 +7,7 @@ export default function App() {
   const songList = [
     {
       id: 0,
-      title: "가나다라마바사",
+      title: "주의친절한 팔에 안기세",
       rootkey: "A",
       artist: "아이자야",
       Tempo: "111, (4/4)",
@@ -20,14 +20,17 @@ export default function App() {
     },
     {
       id: 1,
-      title: "아자차카타파하",
+      title: "내영혼이 은총입어",
       rootkey: "B",
       artist: "디사이플스",
       Tempo: "150, (6/8)",
       score: song2,
       chordArray: [
         { id: 1, pos: { left: "15px", top: "15px" }, chord: 1 },
-        { id: 2, pos: { left: "30px", top: "30px" }, chord: 1 },
+        { id: 2, pos: { left: "30px", top: "30px" }, chord: 4 },
+        { id: 2, pos: { left: "50px", top: "30px" }, chord: 5 },
+        { id: 2, pos: { left: "100px", top: "30px" }, chord: 6 },
+        { id: 2, pos: { left: "500px", top: "30px" }, chord: 7 },
       ]
     },
     {
