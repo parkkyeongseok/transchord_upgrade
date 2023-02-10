@@ -1,12 +1,42 @@
+.select-song{
+	border: 2px solid;
+	width: 500px;
+	margin: 10px;
+	font-size: 13px;
+}
+
+.select-song p{
+	width: 500px;
+	margin: 2px;
+	font-size: 13px;
+}
+
+
+.song-description{
+	border: 2px solid;
+	width: 500px;
+	margin: 10px;
+}
+
+.song-description p{
+	width: 500px;
+	margin: 2px;
+}
+
 .container{
   position: relative;
   border: 5px solid;
   width: 500px;
-  margin: 0px;
+  margin: 10px;
 }
 
 .chord{
   position: absolute;
+	color: red;
+	background-color: white;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 1px 3px;
 }
 
 
@@ -18,7 +48,8 @@
 	display: flex;
 	margin-bottom: 36px;
 	overflow: hidden;
-	width: 1000px
+	width: 1000px;
+	margin: 10px;
 }
 
 .switch-field input {
@@ -48,7 +79,7 @@
 }
 
 .switch-field input:checked + label {
-	background-color: #a5dc86;
+	background-color: #a6df83;
 	box-shadow: none;
 }
 

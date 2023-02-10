@@ -1,50 +1,14 @@
 import './App.css'
-import React, { useState } from 'react';
-import song1 from './score/song1.jpg'
-import song2 from './score/song2.jpg'
+import React, { useState, useEffect } from 'react';
+import songdata00 from './songdata/songdata00'
+import songdata01 from './songdata/songdata01'
+import songdata02 from './songdata/songdata02'
 
 export default function App() {
   const songList = [
-    {
-      id: 0,
-      title: "주의친절한 팔에 안기세",
-      rootkey: "A",
-      artist: "아이자야",
-      Tempo: "111, (4/4)",
-      score: song1,
-      chordArray: [
-        { id: 1, pos: { left: "15px", top: "15px" }, chord: 1 },
-        { id: 2, pos: { left: "30px", top: "30px" }, chord: 4 },
-        { id: 3, pos: { left: "30px", top: "60px" }, chord: 5 }
-      ]
-    },
-    {
-      id: 1,
-      title: "내영혼이 은총입어",
-      rootkey: "B",
-      artist: "디사이플스",
-      Tempo: "150, (6/8)",
-      score: song2,
-      chordArray: [
-        { id: 1, pos: { left: "15px", top: "15px" }, chord: 1 },
-        { id: 2, pos: { left: "30px", top: "30px" }, chord: 4 },
-        { id: 2, pos: { left: "50px", top: "30px" }, chord: 5 },
-        { id: 2, pos: { left: "100px", top: "30px" }, chord: 6 },
-        { id: 2, pos: { left: "500px", top: "30px" }, chord: 7 },
-      ]
-    },
-    {
-      id: 2,
-      title: "내영혼",
-      rootkey: "C",
-      artist: "마커스",
-      Tempo: "60, (4/4)",
-      score: "img2",
-      chordArray: [
-        { id: 1, pos: { left: "15px", top: "15px" }, chord: 1 },
-        { id: 2, pos: { left: "30px", top: "30px" }, chord: 1 },
-      ]
-    },
+    songdata00,
+    songdata01,
+    songdata02,
   ]
 
   const [select, setSelect] = useState({ selNo: 0 })
@@ -60,6 +24,9 @@ export default function App() {
   const [rootKey, setRootKey] =useState('C')
   let copyChordNames = []
 
+
+  
+
   const chordIn = songList[select.selNo].chordArray.map(it=>{
     return it.chord
   })
@@ -67,24 +34,51 @@ export default function App() {
   const [chordOutput, setChordOutput] =useState([])
 
   let chordOut = [] 
-  
+
   const transfer = (e) => {
     setRootKey(e.target.value)
 
+  
     copyChordNames = [...chordNames]
+
     let k = chordNames.indexOf(rootKey)
     for(let i =0; i<k; i++){
-    copyChordNames.push(chordNames[0])
+    copyChordNames.push(copyChordNames[0])
     copyChordNames.shift()
     }
-      const chordObj={
+    const chordObj={
       "1" : `${copyChordNames[0]}`,
-      "2" : `${copyChordNames[2]}m<sup>7</sup>`,
+      "2" : `${copyChordNames[2]}m7`,
       "3" : `${copyChordNames[0]}/${copyChordNames[4]}`,
       "4" : `${copyChordNames[5]}`,
       "5" : `${copyChordNames[7]}`,
+      "5/4" : `${copyChordNames[7]}/${copyChordNames[5]}`,
+      "5dom7" : `${copyChordNames[7]}7`,
+      "5m" : `${copyChordNames[7]}m`,
+      "6b" : `${copyChordNames[4]}7b9/${copyChordNames[8]}`,
+      "6" : `${copyChordNames[9]}m7`,
+      "7b" : `${copyChordNames[10]}`,
+      "7bM7" : `${copyChordNames[10]}M7`,
+      "7" : `${copyChordNames[7]}/${copyChordNames[11]}`,
+      "4/1": `${copyChordNames[5]}/${copyChordNames[0]}`,
+      "4/6": `${copyChordNames[5]}/${copyChordNames[9]}`,
+      "5/1": `${copyChordNames[7]}/${copyChordNames[0]}`,
+      "1/5": `${copyChordNames[0]}/${copyChordNames[7]}`,
+      "7b/1": `${copyChordNames[10]}/${copyChordNames[0]}`,
+      "3m" : `${copyChordNames[4]}m7`,
+      "3m/5" : `${copyChordNames[4]}m/${copyChordNames[7]}`,
+      "3dom7" : `${copyChordNames[4]}7`,
+      "4/5" : `${copyChordNames[5]}/${copyChordNames[7]}`,
+      "5b" : `${copyChordNames[2]}7/${copyChordNames[6]}`,
+      "4m" : `${copyChordNames[5]}m6`,
+      "4m/1" : `${copyChordNames[5]}m6/${copyChordNames[0]}`
+  
       }
-    
+
+ 
+  console.log(copyChordNames)
+
+
     chordOut=chordIn.map(chord=>{
     return chordObj[chord]})
 
@@ -93,14 +87,18 @@ export default function App() {
   }
 
 
+
   return (
     <div>
-      {songList.map((it) => (
-        <p key={it.id} value={it.id} onClick={() => { selSong(it.id) }} > {it.title}, artist : {it.artist} </p>))}
-      <h3>곡번호 :{songList[select.selNo].id}</h3>
-      <h3>곡명 : {songList[select.selNo].title}</h3>
-      <h3>근음 : {songList[select.selNo].rootkey}</h3>
-
+      <div className="select-song">
+      {songList.map((it,index) => (
+        <a href="#!"> <p key={it.id} value={it.id} onClick={() => { selSong(it.id,) }} > {it.title} - {it.artist} </p></a>))} 
+      </div>
+      <div className="song-description"><p>ID :{songList[select.selNo].id}</p>
+      <p>Title : {songList[select.selNo].title}</p>
+      <p>Root : {songList[select.selNo].rootkey}</p>
+      <p>Tempo : {songList[select.selNo].Tempo}</p>
+      </div>
       <div className="switch-field">
         <input type="radio" id="root_A" name="root" value="A" onClick={e=>{transfer(e)}} />
         <label htmlFor="root_A">A</label>
@@ -132,7 +130,7 @@ export default function App() {
       <div className="container">
           <img src={songList[select.selNo].score} alt="My Image" width="500px"/>
         {songList[select.selNo].chordArray.map((it,index) => (
-          <p key={it.id} className="chord" style={it.pos}>{chordOutput[index]}</p>
+          <p key={index} className="chord" style={it.pos}>{chordOutput[index]}</p>
         ))}
       </div>
 
