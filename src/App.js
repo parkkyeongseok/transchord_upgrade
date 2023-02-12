@@ -1,14 +1,22 @@
 import './App.css'
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import songdata00 from './songdata/songdata00'
 import songdata01 from './songdata/songdata01'
 import songdata02 from './songdata/songdata02'
+import songdata03 from './songdata/songdata03'
+import songdata04 from './songdata/songdata04'
+import songdata05 from './songdata/songdata05'
+import songdata06 from './songdata/songdata06'
 
 export default function App() {
   const songList = [
     songdata00,
     songdata01,
     songdata02,
+    songdata03,
+    songdata04,
+    songdata05,
+    songdata06,
   ]
 
   const [select, setSelect] = useState({ selNo: 0 })
@@ -126,7 +134,7 @@ export default function App() {
         <label htmlFor="root_G#">G#</label>
       </div>
 
-      
+      <p>버튼을 더블클릭 하세요!</p>
       <div className="container">
           <img src={songList[select.selNo].score} alt="My Image" width="500px"/>
         {songList[select.selNo].chordArray.map((it,index) => (

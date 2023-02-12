@@ -9,7 +9,7 @@ const songdata02 =
   Tempo: "60, (4/4)",
   score: song02,
   chordArray: [
-    { id: 1, pos: { left: "15px", top: "15px" }, chord: 1 },
+    { pos: { left: "15px", top: "15px" }, chord: 1 },
   ]
 }
 
