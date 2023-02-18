@@ -7,6 +7,9 @@ import songdata03 from './songdata/songdata03'
 import songdata04 from './songdata/songdata04'
 import songdata05 from './songdata/songdata05'
 import songdata06 from './songdata/songdata06'
+import songdata07 from './songdata/songdata07'
+import songdata08 from './songdata/songdata08'
+import songdata09 from './songdata/songdata09'
 
 export default function App() {
   const songList = [
@@ -17,12 +20,16 @@ export default function App() {
     songdata04,
     songdata05,
     songdata06,
+    songdata07,
+    songdata08,
+    songdata09,
   ]
 
   const [select, setSelect] = useState({ selNo: 0 })
 
   const selSong = (e) => {
     setSelect({ selNo: e })
+    console.log(select.selNo)
   }
 
 //여기서부터는 루트키 변경 함수 작성
@@ -56,6 +63,7 @@ export default function App() {
     }
     const chordObj={
       "1" : `${copyChordNames[0]}`,
+      "2b" : `${copyChordNames[9]}7/${copyChordNames[1]}`,
       "2" : `${copyChordNames[2]}m7`,
       "3" : `${copyChordNames[0]}/${copyChordNames[4]}`,
       "4" : `${copyChordNames[5]}`,
@@ -88,19 +96,24 @@ export default function App() {
 
 
     chordOut=chordIn.map(chord=>{
-    return chordObj[chord]})
+    if(chordObj.hasOwnProperty(chord)){
+    return chordObj[chord]
+      }
+    else
+      return chord
+    }
+    )
 
     console.log(chordOut)
     setChordOutput(chordOut)
   }
 
 
-
   return (
     <div>
       <div className="select-song">
-      {songList.map((it,index) => (
-        <a href="#!"> <p key={it.id} value={it.id} onClick={() => { selSong(it.id,) }} > {it.title} - {it.artist} </p></a>))} 
+      {songList.map((it) => (
+        <a href="#!"> <p key={it.id} value={it.id} onClick={() => { selSong(it.id) }} > {it.title} </p></a>))} 
       </div>
       <div className="song-description"><p>ID :{songList[select.selNo].id}</p>
       <p>Title : {songList[select.selNo].title}</p>
@@ -108,13 +121,13 @@ export default function App() {
       <p>Tempo : {songList[select.selNo].Tempo}</p>
       </div>
       <div className="switch-field">
-        <input type="radio" id="root_A" name="root" value="A" onClick={e=>{transfer(e)}} />
+        <input type="radio" id="root_A" name="root" value="A"  onClick={e=>{transfer(e)}}/>
         <label htmlFor="root_A">A</label>
-        <input type="radio" id="root_Bb" name="root" value="Bb" onClick={e=>{transfer(e)}} />
+        <input type="radio" id="root_Bb" name="root" value="Bb"onClick={e=>{transfer(e)}} />
         <label htmlFor="root_Bb">Bb</label>
-        <input type="radio" id="root_B" name="root" value="B" onClick={e=>{transfer(e)}} />
+        <input type="radio" id="root_B" name="root" value="B"  onClick={e=>{transfer(e)}}/>
         <label htmlFor="root_B">B</label>
-        <input type="radio" id="root_C" name="root" value="C" onClick={e=>{transfer(e)}} />
+        <input type="radio" id="root_C" name="root" value="C" onClick={e=>{transfer(e)}}/>
         <label htmlFor="root_C">C</label>
         <input type="radio" id="root_C#" name="root" value="C#" onClick={e=>{transfer(e)}} />
         <label htmlFor="root_C#">C#</label>
@@ -124,9 +137,9 @@ export default function App() {
         <label htmlFor="root_Eb">Eb</label>
         <input type="radio" id="root_E" name="root" value="E" onClick={e=>{transfer(e)}} />
         <label htmlFor="root_E">E</label>
-        <input type="radio" id="root_F" name="root" value="F" onClick={e=>{transfer(e)}} />
+        <input type="radio" id="root_F" name="root" value="F"  onClick={e=>{transfer(e)}}/>
         <label htmlFor="root_F">F</label>
-        <input type="radio" id="root_F#" name="root" value="F#" onClick={e=>{transfer(e)}} />
+        <input type="radio" id="root_F#" name="root" value="F#"  onClick={e=>{transfer(e)}}/>
         <label htmlFor="root_F#">F#</label>
         <input type="radio" id="root_G" name="root" value="G" onClick={e=>{transfer(e)}} />
         <label htmlFor="root_G">G</label>
@@ -136,7 +149,7 @@ export default function App() {
 
       <p>버튼을 더블클릭 하세요!</p>
       <div className="container">
-          <img src={songList[select.selNo].score} alt="My Image" width="500px"/>
+          <img src={songList[select.selNo].score} alt="My Image" width="500px"/> 
         {songList[select.selNo].chordArray.map((it,index) => (
           <p key={index} className="chord" style={it.pos}>{chordOutput[index]}</p>
         ))}
