@@ -1,26 +1,9 @@
-.select-song{
+.disc{
 	border: 2px solid;
-	width: 500px;
+	width: 490px;
 	margin: 10px;
-	font-size: 13px;
-}
-
-.select-song p{
-	width: 500px;
-	margin: 2px;
-	font-size: 13px;
-}
-
-
-.song-description{
-	border: 2px solid;
-	width: 500px;
-	margin: 10px;
-}
-
-.song-description p{
-	width: 500px;
-	margin: 2px;
+	font-size: 15px;
+	padding: 5px;
 }
 
 .container{
@@ -39,8 +22,6 @@
 	padding: 1px 3px;
 }
 
-
-
 /* 라디오 버튼 */
 
 
@@ -50,6 +31,7 @@
 	overflow: hidden;
 	width: 1000px;
 	margin: 10px;
+	
 }
 
 .switch-field input {
