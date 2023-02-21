@@ -6,7 +6,7 @@ const songdata05 =
   title: "구주예수 의지함이",
   rootkey: "A",
   artist: "??",
-  Tempo: "60, (4/4)",
+  tempo: "60, (4/4)",
   score: song05,
   chordArray: [
     { pos: { left: "15px", top: "15px" }, chord: 1 },

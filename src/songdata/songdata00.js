@@ -6,7 +6,7 @@ const songdata00 =
   title: "마음속에 근심있는 사람",
   rootkey: "A",
   artist: "어노인팅",
-  Tempo: "114, (4/4)",
+  tempo: "114, (4/4)",
   score: song00,
   chordArray: [
     { pos: { left: "60px", top: "58px" }, chord: '1' },

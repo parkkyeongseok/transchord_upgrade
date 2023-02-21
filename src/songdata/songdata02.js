@@ -6,7 +6,7 @@ const songdata02 =
   title: "임재",
   rootkey: "A",
   artist: "",
-  Tempo: "60, (4/4)",
+  tempo: "60, (4/4)",
   score: song02,
   chordArray: [
     { pos: { left: "15px", top: "15px" }, chord: 1 },

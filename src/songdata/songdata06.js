@@ -6,7 +6,7 @@ const songdata06 =
   title: "나의 영혼이",
   rootkey: "A",
   artist: "??",
-  Tempo: "60, (4/4)",
+  tempo: "60, (4/4)",
   score: song06,
   chordArray: [
     { pos: { left: "15px", top: "15px" }, chord: 1 },

@@ -6,7 +6,7 @@ const songdata03 =
   title: "은혜",
   rootkey: "A",
   artist: "??",
-  Tempo: "60, (4/4)",
+  tempo: "60, (4/4)",
   score: song03,
   chordArray: [
     { pos: { left: "15px", top: "15px" }, chord: 1 },

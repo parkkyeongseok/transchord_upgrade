@@ -6,7 +6,7 @@ const songdata04 =
   title: "주예수 내맘에 들어와",
   rootkey: "A",
   artist: "??",
-  Tempo: "60, (4/4)",
+  tempo: "60, (4/4)",
   score: song04,
   chordArray: [
     { pos: { left: "15px", top: "15px" }, chord: 1 },

@@ -6,7 +6,7 @@ const songdata01 =
       title: "꽃들도",
       rootkey: "G",
       artist: "",
-      Tempo: "63, (4/4)",
+      tempo: "63, (4/4)",
       score: song01,
       chordArray: [
         { pos: { left: "15px", top: "15px" }, chord: 1 },

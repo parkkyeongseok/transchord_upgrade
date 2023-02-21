@@ -6,7 +6,7 @@ const songdata09 =
   title: "나의 가장 낮은 마음",
   rootkey: "G",
   artist: "쉐키나",
-  Tempo: "120, (4/4)",
+  tempo: "130, (4/4)",
   score: song09,
   chordArray: [
     { pos: { left: "75px", top: "35px" }, chord: "1" },
@@ -38,10 +38,14 @@ const songdata09 =
     { pos: { left: "360px", top: "400px" }, chord: "^ 땡기기" },
 
     { pos: { left: "45px", top: "455px" }, chord: "1" },
+    { pos: { left: "120px", top: "455px" }, chord: "2" },
     { pos: { left: "230px", top: "455px" }, chord: "4" },
-    { pos: { left: "415px", top: "455px" }, chord: "6" },
+    { pos: { left: "310px", top: "455px" }, chord: "5" },
+    { pos: { left: "415px", top: "455px" }, chord: "3" },
 
+    { pos: { left: "50px", top: "530px" }, chord: "6" },
     { pos: { left: "170px", top: "530px" }, chord: "4" },
+    { pos: { left: "270px", top: "530px" }, chord: "5/4" },
     { pos: { left: "350px", top: "530px" }, chord: "1" },
   ]
 }

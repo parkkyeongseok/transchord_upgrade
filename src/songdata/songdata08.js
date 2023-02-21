@@ -6,7 +6,7 @@ const songdata08 =
   title: "예수 따라가며",
   rootkey: "E",
   artist: "어노인팅",
-  Tempo: "78, (3/4)",
+  tempo: "78, (3/4)",
   score: song08,
   chordArray: [
     { pos: { left: "100px", top: "60px" }, chord: "1" },
@@ -29,8 +29,8 @@ const songdata08 =
     { pos: { left: "120px", top: "558px" }, chord: "2" },
     { pos: { left: "200px", top: "558px" }, chord: "7" },
     { pos: { left: "280px", top: "558px" }, chord: "3" },
-    { pos: { left: "330px", top: "558px" }, chord: "4" },
-    { pos: { left: "370px", top: "558px" }, chord: "5" },
+    { pos: { left: "400px", top: "558px" }, chord: "5" },
+    { pos: { left: "370px", top: "558px" }, chord: "4" },
     { pos: { left: "440px", top: "558px" }, chord: "1" },
   ]
 }

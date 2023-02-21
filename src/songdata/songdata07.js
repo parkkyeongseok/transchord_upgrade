@@ -6,7 +6,7 @@ const songdata07 =
   title: "기뻐하며 왕께 노래 부르리",
   rootkey: "G",
   artist: "어노인팅",
-  Tempo: "130, (4/4)",
+  tempo: "130, (4/4)",
   score: song07,
   chordArray: [
     { pos: { left: "120px", top: "40px" }, chord: "3" },
