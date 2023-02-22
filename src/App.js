@@ -47,7 +47,6 @@ export default function App() {
 
   return (
     <>
-    <div className="bg-img">
     <div className="disc">
       <h4>곡을 선택하세요</h4>
          <select onChange={handleSelect}>
@@ -60,8 +59,7 @@ export default function App() {
         </div>
         <div class="hr"></div>
       <SongContainer selSong={select} handler={handler}/>
-      </div>
-    </>
+      </>
   )
 
 }
