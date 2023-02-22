@@ -6,7 +6,11 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+    <>
+    <div className="bg-img">
     <App />
+    </div>
+    </>
 );
 
 reportWebVitals();
