@@ -10,6 +10,7 @@ const songdata03 =
   score: song03,
   chordArray: [
     { pos: { left: "15px", top: "15px" }, chord: 1 },
+    { pos: { left: "15px", top: "15px" }, chord: 4 },
   ]
 }
 

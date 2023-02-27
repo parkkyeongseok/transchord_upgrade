@@ -1,5 +1,5 @@
 import './App.css'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import songdata00 from './songdata/songdata00'
 import songdata01 from './songdata/songdata01'
 import songdata02 from './songdata/songdata02'
@@ -10,6 +10,9 @@ import songdata06 from './songdata/songdata06'
 import songdata07 from './songdata/songdata07'
 import songdata08 from './songdata/songdata08'
 import songdata09 from './songdata/songdata09'
+import songdata10 from './songdata/songdata10'
+import songdata11 from './songdata/songdata11'
+import songdata12 from './songdata/songdata12'
 import changeChord from './changeChord'
 
 export default function App() {
@@ -24,17 +27,19 @@ export default function App() {
     songdata07,
     songdata08,
     songdata09,
+    songdata10,
+    songdata11,
+    songdata12,
   ]
 
-
-  const [select, setSelect] = useState(
-    {...songList[0]}
-    )
+  const [select, setSelect] = useState(songList[0])
 
   const handleSelect = (e) => {
     console.log(e.target.value);
     let found = songList.find(i=>i.id === Number(e.target.value))
-    setSelect(select=>({...select,...found}))
+    setSelect(select=>({select,...found}))
+    console.log(found)
+
   };
 
     //자식에게 전달할 함수
@@ -44,8 +49,8 @@ export default function App() {
 
     console.log(e.target.value)
   }
-
   return (
+    
     <div className="bg-img">
     <div className="disc">
       <h4>곡을 선택하세요</h4>
@@ -57,7 +62,7 @@ export default function App() {
           ))}
         </select>
         </div>
-        <div class="hr"></div>
+        <div className="hr"></div>
       <SongContainer selSong={select} handler={handler}/>
       </div>
   )
@@ -67,9 +72,11 @@ export default function App() {
 //song container 컴포넌트
 
 const SongContainer = ({selSong, handler}) => {
+
   //곡 내부 입력 코드 배열화  ---1 인자
   const chordIn = selSong.chordArray.map(i=>i.chord)
   console.log('chordIn: ', chordIn)
+
 
   //나중에 버튼 만들기 위한 배열
     const scale = ['C', 'C#', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'G#', 'A', 'Bb', 'B']
@@ -85,7 +92,7 @@ const SongContainer = ({selSong, handler}) => {
       return tempScale
   }
 
-  console.log('chordScale: ', changeScale(selSong.rootkey))
+  //console.log('chordScale: ', changeScale(selSong.rootkey))
 
   //'루트기준 스케일'과 '곡내부 입력코드 배열'을 넣으면, '변환 후 코드배열'을 출력해주는는 함수.   --1 인자와 --2 인자를 매개변수로 받는 함수. 
   const transfer = (array1, array2) => {
@@ -101,7 +108,7 @@ const SongContainer = ({selSong, handler}) => {
     return chordOut
   }
 
-  console.log('transfer: ', transfer(chordIn,changeScale(selSong.rootkey)))
+  //console.log('transfer: ', transfer(chordIn,changeScale(selSong.rootkey)))
 
   //chordIn을 이용해서 output을 실행
   const chordOut= transfer(chordIn,changeScale(selSong.rootkey))
@@ -113,8 +120,9 @@ const SongContainer = ({selSong, handler}) => {
      <h4>템포 : {selSong.tempo}</h4>
      <h4>근음 : {selSong.rootkey}</h4>
      </div>
-     <div class="hr"></div>
+     <div className="hr"></div>
      <div className="switch-field">
+
 
           <input type ="radio" id={scale[0]} name="root" value={scale[0]} onChange={handler} checked={scale[0]===selSong.rootkey ? true : false}/>
           <label htmlFor={scale[0]}>{scale[0]}</label>
@@ -143,7 +151,7 @@ const SongContainer = ({selSong, handler}) => {
           
             </div>
 
-            <div class="hr"></div>
+            <div className="hr"></div>
       <div className="container">
         <img src= {selSong.score} alt="Score" width="500px"/> 
         {selSong.chordArray.map((it,index) => (
