@@ -10,7 +10,7 @@ const chordObj={
         "5" : `${rootScale[7]}`,
         "5/4" : `${rootScale[7]}/${rootScale[5]}`,
         "5dom7" : `${rootScale[7]}7`,
-        "5m" : `${rootScale[7]}m`,
+        "5m" : `${rootScale[7]}m7`,
         "6b" : `${rootScale[4]}7b9/${rootScale[8]}`,
         "6" : `${rootScale[9]}m7`,
         "7b" : `${rootScale[10]}`,

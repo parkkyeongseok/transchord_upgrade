@@ -1,36 +1,9 @@
 import './App.css'
 import React, { useState, useEffect } from 'react';
-import songdata00 from './songdata/songdata00'
-import songdata01 from './songdata/songdata01'
-import songdata02 from './songdata/songdata02'
-import songdata03 from './songdata/songdata03'
-import songdata04 from './songdata/songdata04'
-import songdata05 from './songdata/songdata05'
-import songdata06 from './songdata/songdata06'
-import songdata07 from './songdata/songdata07'
-import songdata08 from './songdata/songdata08'
-import songdata09 from './songdata/songdata09'
-import songdata10 from './songdata/songdata10'
-import songdata11 from './songdata/songdata11'
-import songdata12 from './songdata/songdata12'
+import songList from './songdata/songdata'
 import changeChord from './changeChord'
 
 export default function App() {
-  const songList = [
-    songdata00,
-    songdata01,
-    songdata02,
-    songdata03,
-    songdata04,
-    songdata05,
-    songdata06,
-    songdata07,
-    songdata08,
-    songdata09,
-    songdata10,
-    songdata11,
-    songdata12,
-  ]
 
   const [select, setSelect] = useState(songList[0])
 
@@ -39,8 +12,10 @@ export default function App() {
     let found = songList.find(i=>i.id === Number(e.target.value))
     setSelect(select=>({select,...found}))
     console.log(found)
-
   };
+
+     // Effect to force re-render when select prop changes
+
 
     //자식에게 전달할 함수
   const handler =(e) =>
@@ -57,13 +32,14 @@ export default function App() {
          <select onChange={handleSelect}>
           {songList.map((i) => (
             <option value={i.id} key={i.id}>
-              {i.title}
+              {i.title} / {i.artist} / {i.rootkey} key / {i.tempo}
             </option>
           ))}
         </select>
         </div>
         <div className="hr"></div>
       <SongContainer selSong={select} handler={handler}/>
+
       </div>
   )
 
@@ -72,10 +48,10 @@ export default function App() {
 //song container 컴포넌트
 
 const SongContainer = ({selSong, handler}) => {
-
+console.log(selSong)
   //곡 내부 입력 코드 배열화  ---1 인자
   const chordIn = selSong.chordArray.map(i=>i.chord)
-  console.log('chordIn: ', chordIn)
+  //console.log('chordIn: ', chordIn)
 
 
   //나중에 버튼 만들기 위한 배열
@@ -116,14 +92,12 @@ const SongContainer = ({selSong, handler}) => {
   return (
     <div>   
       <div className="disc">
-     <h4>곡명 : {selSong.title}</h4>
+     <h4>곡명 : {selSong.title}, {selSong.artist} (ID : {selSong.id})</h4>
      <h4>템포 : {selSong.tempo}</h4>
-     <h4>근음 : {selSong.rootkey}</h4>
+     <h4>근음 : {selSong.rootkey} key</h4>
      </div>
      <div className="hr"></div>
      <div className="switch-field">
-
-
           <input type ="radio" id={scale[0]} name="root" value={scale[0]} onChange={handler} checked={scale[0]===selSong.rootkey ? true : false}/>
           <label htmlFor={scale[0]}>{scale[0]}</label>
           <input type ="radio" id={scale[1]} name="root" value={scale[1]} onChange={handler} checked={scale[1]===selSong.rootkey ? true : false}/>
