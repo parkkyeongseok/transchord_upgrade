@@ -365,9 +365,9 @@ const songdata13 =
     { pos: { left: "301px", top: "321px" }, chord: "5" },
     { pos: { left: "406px", top: "321px" }, chord: "1" },
 
-    { pos: { left: "191px", top: "409px" }, chord: "4" },
-    { pos: { left: "263px", top: "409px" }, chord: "5" },
-    { pos: { left: "398px", top: "409px" }, chord: "1" },
+    { pos: { left: "191px", top: "395px" }, chord: "4" },
+    { pos: { left: "263px", top: "395px" }, chord: "5" },
+    { pos: { left: "398px", top: "395px" }, chord: "1" },
 
     { pos: { left: "191px", top: "475px" }, chord: "4" },
     { pos: { left: "263px", top: "475px" }, chord: "5" },
@@ -401,7 +401,7 @@ const songdata14 =
     { pos: { left: "183px", top: "71px" }, chord: "6" },
     { pos: { left: "233px", top: "71px" }, chord: "1/5" },
     { pos: { left: "287px", top: "71px" }, chord: "5" },
-    { pos: { left: "336px", top: "71px" }, chord: "4" },
+    { pos: { left: "336px", top: "71px" }, chord: "5/4" },
     { pos: { left: "409px", top: "71px" }, chord: "3" },
 
     { pos: { left: "70px", top: "200px" }, chord: "4" },
@@ -454,7 +454,7 @@ const songdata15 =
     { pos: { left: "421px", top: "260px" }, chord: "1" },
 
     { pos: { left: "74px", top: "418px" }, chord: "1" },
-    { pos: { left: "141px", top: "418px" }, chord: "3" },
+    { pos: { left: "120px", top: "418px" }, chord: "3" },
     { pos: { left: "158px", top: "418px" }, chord: "4" },
     { pos: { left: "218px", top: "418px" }, chord: "1" },
     { pos: { left: "245px", top: "418px" }, chord: "7" },
