@@ -15,6 +15,7 @@ import song13 from './score/song13.jpg'
 import song14 from './score/song14.jpg'
 import song15 from './score/song15.jpg'
 import song16 from './score/song16.jpg'
+import song17 from './score/song17.jpg'
 
 const songdata00 =
 { id: 0,
@@ -81,9 +82,44 @@ const songdata01 =
       tempo: "63, (4/4)",
       score: song01,
       chordArray: [
-        { pos: { left: "15px", top: "15px" }, chord: 1 },
-        { pos: { left: "15px", top: "15px" }, chord: 1 },
-        { pos: { left: "15px", top: "15px" }, chord: 1 },
+        { pos: { left: "78px", top: "54px" }, chord: 1 },
+        { pos: { left: "171px", top: "50px" }, chord: 5 },
+        { pos: { left: "308px", top: "50px" }, chord: 4 },
+        { pos: { left: "434px", top: "50px" }, chord: 4 },
+
+        { pos: { left: "55px", top: "174px" }, chord: 6 },
+        { pos: { left: "144px", top: "174px" }, chord: 5 },
+        { pos: { left: "284px", top: "174px" }, chord: 4 },
+        { pos: { left: "421px", top: "174px" }, chord: 4 },
+
+        { pos: { left: "154px", top: "298px" }, chord: 4 },
+        { pos: { left: "233px", top: "298px" }, chord: 5 },
+        { pos: { left: "300px", top: "298px" }, chord: 1 },
+        { pos: { left: "364px", top: "298px" }, chord: 7 },
+        { pos: { left: "411px", top: "298px" }, chord: 6 },
+
+        { pos: { left: "53px", top: "393px" }, chord: 4 },
+        { pos: { left: "148px", top: "393px" }, chord: 5 },
+        { pos: { left: "223px", top: "393px" }, chord: 1 },
+        { pos: { left: "337px", top: "375px" }, chord: "*" },
+        { pos: { left: "342px", top: "375px" }, chord: "5bm7b5" },
+        { pos: { left: "342px", top: "393px" }, chord: 4 },
+        { pos: { left: "422px", top: "375px" }, chord: "*" },
+        { pos: { left: "426px", top: "375px" }, chord: "4m" },
+        { pos: { left: "426px", top: "393px" }, chord: 5 },
+
+        { pos: { left: "52px", top: "495px" }, chord: 1 },
+        { pos: { left: "48px", top: "480px" }, chord: "*" },
+        { pos: { left: "52px", top: "480px" }, chord: "3" },
+        { pos: { left: "113px", top: "495px" }, chord: 7 },
+        { pos: { left: "155px", top: "480px" }, chord: "*" },
+        { pos: { left: "160px", top: "480px" }, chord: "3b" },
+        { pos: { left: "160px", top: "495px" }, chord: 6 },
+        { pos: { left: "238px", top: "480px" }, chord: "*" },
+        { pos: { left: "243px", top: "480px" }, chord: 2 },
+        { pos: { left: "243px", top: "495px" }, chord: 4 },
+        { pos: { left: "340px", top: "495px" }, chord: 5 },
+        { pos: { left: "427px", top: "495px" }, chord: 1 },
 
       ]
 }
@@ -373,6 +409,8 @@ const songdata13 =
     { pos: { left: "263px", top: "475px" }, chord: "5" },
     { pos: { left: "398px", top: "475px" }, chord: "1" },
 
+    { pos: { left: "72px", top: "535px" }, chord: "section" },
+    { pos: { left: "72px", top: "553px" }, chord: "*" },
     { pos: { left: "77px", top: "553px" }, chord: "5m" },
     { pos: { left: "137px", top: "553px" }, chord: "1" },
     { pos: { left: "191px", top: "553px" }, chord: "4" },
@@ -525,6 +563,49 @@ const songdata16 =
 
   ]
 }
+
+const songdata17 =
+{
+  id: 17,
+  title: "마지막 날에",
+  rootkey: "G",
+  artist: "-",
+  tempo: "130, (4/4)",
+  score: song17,
+  chordArray: [
+    { pos: { left: "67px", top: "49px" }, chord: "1" },
+    { pos: { left: "202px", top: "49px" }, chord: "6" },
+    { pos: { left: "281px", top: "49px" }, chord: "4" },
+    { pos: { left: "406px", top: "49px" }, chord: "5" },
+
+    { pos: { left: "50px", top: "137px" }, chord: "1" },
+    { pos: { left: "185px", top: "137px" }, chord: "6" },
+    { pos: { left: "284px", top: "137px" }, chord: "4" },
+    { pos: { left: "413px", top: "137px" }, chord: "5" },
+
+    { pos: { left: "50px", top: "224px" }, chord: "1" },
+    { pos: { left: "284px", top: "224px" }, chord: "6" },
+
+    { pos: { left: "50px", top: "307px" }, chord: "4" },
+    { pos: { left: "45px", top: "295px" }, chord: "*" },
+    { pos: { left: "50px", top: "295px" }, chord: "7b" },
+    { pos: { left: "136px", top: "307px" }, chord: "2" },
+    { pos: { left: "130px", top: "295px" }, chord: "*" },
+    { pos: { left: "136px", top: "295px" }, chord: "4/6" },
+    { pos: { left: "255px", top: "307px" }, chord: "5" },
+
+    { pos: { left: "69px", top: "395px" }, chord: "1" },
+    { pos: { left: "183px", top: "395px" }, chord: "6" },
+    { pos: { left: "284px", top: "395px" }, chord: "4" },
+    { pos: { left: "411px", top: "395px" }, chord: "5" },
+
+    { pos: { left: "63px", top: "482px" }, chord: "1" },
+    { pos: { left: "159px", top: "482px" }, chord: "6" },
+    { pos: { left: "268px", top: "482px" }, chord: "4" },
+    { pos: { left: "331px", top: "482px" }, chord: "5" },
+    { pos: { left: "415px", top: "482px" }, chord: "1" },
+  ]
+}
 /////  EXPORT DEFAULT SongList
 
 const songList = [
@@ -545,6 +626,7 @@ const songList = [
   songdata14,
   songdata15,
   songdata16,
+  songdata17,
 ]
 
 export default songList

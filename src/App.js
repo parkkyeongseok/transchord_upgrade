@@ -1,8 +1,7 @@
 import './App.css'
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import songList from './songdata/songdata'
 import changeChord from './changeChord'
-import YouTube from 'react-youtube';
 
 export default function App() {
 
@@ -40,8 +39,6 @@ export default function App() {
         </div>
         <div className="hr"></div>
       <SongContainer selSong={select} handler={handler}/>
-      <VideoPlayer/>
-
       </div>
   )
 
@@ -138,26 +135,3 @@ console.log(selSong)
   )
 }
 
-
-
-class VideoPlayer extends React.Component {
-  render() {
-    const opts = {
-      height: '390',
-      width: '640',
-      playerVars: {
-        // https://developers.google.com/youtube/player_parameters
-        autoplay: 1,
-      },
-    };
-
-    return (
-      <YouTube videoId="9dz56N4P6Ho" opts={opts} onReady={this._onReady} />
-    );
-  }
-
-  _onReady(event) {
-    // access to player in all event handlers via event.target
-    event.target.pauseVideo();
-  }
-}
