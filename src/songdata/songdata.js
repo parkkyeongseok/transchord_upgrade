@@ -16,6 +16,9 @@ import song14 from './score/song14.jpg'
 import song15 from './score/song15.jpg'
 import song16 from './score/song16.jpg'
 import song17 from './score/song17.jpg'
+import song18 from './score/song18.jpg'
+import song19 from './score/song19.jpg'
+import song20 from './score/song20.jpg'
 
 const songdata00 =
 { id: 0,
@@ -112,11 +115,7 @@ const songdata01 =
         { pos: { left: "48px", top: "480px" }, chord: "*" },
         { pos: { left: "52px", top: "480px" }, chord: "3" },
         { pos: { left: "113px", top: "495px" }, chord: 7 },
-        { pos: { left: "155px", top: "480px" }, chord: "*" },
-        { pos: { left: "160px", top: "480px" }, chord: "3b" },
         { pos: { left: "160px", top: "495px" }, chord: 6 },
-        { pos: { left: "238px", top: "480px" }, chord: "*" },
-        { pos: { left: "243px", top: "480px" }, chord: 2 },
         { pos: { left: "243px", top: "495px" }, chord: 4 },
         { pos: { left: "340px", top: "495px" }, chord: 5 },
         { pos: { left: "427px", top: "495px" }, chord: 1 },
@@ -606,6 +605,114 @@ const songdata17 =
     { pos: { left: "415px", top: "482px" }, chord: "1" },
   ]
 }
+
+const songdata18 =
+{
+  id: 18,
+  title: "사람을 보며 세상을 볼 땐",
+  rootkey: "E",
+  artist: "-",
+  tempo: "120, (4/4)",
+  score: song18,
+  chordArray: [
+    { pos: { left: "88px", top: "52px" }, chord: "1" },
+    { pos: { left: "196px", top: "52px" }, chord: "4/1" },
+    { pos: { left: "308px", top: "52px" }, chord: "5/1" },
+    { pos: { left: "439px", top: "52px" }, chord: "4/1" },
+    { pos: { left: "71px", top: "141px" }, chord: "3" },
+    { pos: { left: "182px", top: "141px" }, chord: "4" },
+    { pos: { left: "306px", top: "141px" }, chord: "5" },
+    { pos: { left: "445px", top: "141px" }, chord: "1" },
+
+    { pos: { left: "65px", top: "233px" }, chord: "1" },
+    { pos: { left: "165px", top: "233px" }, chord: "3" },
+    { pos: { left: "290px", top: "233px" }, chord: "4/6" },
+    { pos: { left: "390px", top: "233px" }, chord: "7" },
+
+    { pos: { left: "68px", top: "323px" }, chord: "3" },
+    { pos: { left: "177px", top: "323px" }, chord: "4" },
+    { pos: { left: "297px", top: "323px" }, chord: "5" },
+    { pos: { left: "441px", top: "323px" }, chord: "6" },
+
+    { pos: { left: "68px", top: "408px" }, chord: "3" },
+    { pos: { left: "177px", top: "408px" }, chord: "4" },
+    { pos: { left: "297px", top: "408px" }, chord: "5" },
+    { pos: { left: "441px", top: "408px" }, chord: "1" },
+
+    { pos: { left: "71px", top: "499px" }, chord: "1" },
+    { pos: { left: "179px", top: "499px" }, chord: "3" },
+    { pos: { left: "284px", top: "499px" }, chord: "4/6" },
+    { pos: { left: "400px", top: "499px" }, chord: "7" },
+    
+    { pos: { left: "68px", top: "591px" }, chord: "3" },
+    { pos: { left: "198px", top: "591px" }, chord: "4" },
+    { pos: { left: "331px", top: "591px" }, chord: "5" },
+    { pos: { left: "441px", top: "591px" }, chord: "6" },
+
+    { pos: { left: "68px", top: "676px" }, chord: "3" },
+    { pos: { left: "196px", top: "676px" }, chord: "4" },
+    { pos: { left: "335px", top: "676px" }, chord: "5" },
+    { pos: { left: "450px", top: "676px" }, chord: "1" },
+  ]
+}
+
+const songdata19 =
+{
+  id: 19,
+  title: "주와 같이 길가는 것",
+  rootkey: "E",
+  artist: "-",
+  tempo: "120, (4/4)",
+  score: song19,
+  chordArray: [
+    { pos: { left: "82px", top: "125px" }, chord: "1" },
+    { pos: { left: "151px", top: "125px" }, chord: "3" },
+    { pos: { left: "202px", top: "125px" }, chord: "4" },
+    { pos: { left: "296px", top: "125px" }, chord: "6" },
+    { pos: { left: "394px", top: "125px" }, chord: "5" },
+
+    { pos: { left: "70px", top: "225px" }, chord: "3" },
+    { pos: { left: "180px", top: "225px" }, chord: "4" },
+    { pos: { left: "284px", top: "225px" }, chord: "2" },
+    { pos: { left: "405px", top: "225px" }, chord: "5" },
+    { pos: { left: "87px", top: "320px" }, chord: "1" },
+
+    { pos: { left: "71px", top: "393px" }, chord: "4" },
+    { pos: { left: "182px", top: "393px" }, chord: "3" },
+    { pos: { left: "289px", top: "393px" }, chord: "4" },
+    { pos: { left: "400px", top: "393px" }, chord: "3" },
+
+    { pos: { left: "72px", top: "460px" }, chord: "7b" },
+    { pos: { left: "186px", top: "460px" }, chord: "4/6" },
+    { pos: { left: "300px", top: "460px" }, chord: "2" },
+    { pos: { left: "400px", top: "460px" }, chord: "5" },
+
+    { pos: { left: "74px", top: "616px" }, chord: "1" },
+    { pos: { left: "150px", top: "616px" }, chord: "4" },
+    { pos: { left: "216px", top: "616px" }, chord: "6" },
+    { pos: { left: "288px", top: "616px" }, chord: "5" },
+
+    { pos: { left: "348px", top: "616px" }, chord: "3" },
+    { pos: { left: "428px", top: "616px" }, chord: "4" },
+    { pos: { left: "74px", top: "697px" }, chord: "2" },
+    { pos: { left: "133px", top: "697px" }, chord: "5" },
+    { pos: { left: "209px", top: "697px" }, chord: "5" },
+    { pos: { left: "256px", top: "697px" }, chord: "1" },
+  ]
+}
+
+const songdata20 =
+{
+  id: 20,
+  title: "밤이나 낮이나",
+  rootkey: "E",
+  artist: "-",
+  tempo: "60, (4/4)",
+  score: song20,
+  chordArray: [
+    { pos: { left: "67px", top: "49px" }, chord: "1" },
+  ]
+}
 /////  EXPORT DEFAULT SongList
 
 const songList = [
@@ -627,6 +734,9 @@ const songList = [
   songdata15,
   songdata16,
   songdata17,
+  songdata18,
+  songdata19,
+  songdata20,
 ]
 
 export default songList
